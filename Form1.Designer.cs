@@ -31,6 +31,7 @@ namespace Journaling
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
@@ -39,7 +40,15 @@ namespace Journaling
             this.btnBook = new FontAwesome.Sharp.IconButton();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.label_time = new System.Windows.Forms.Label();
+            this.label_Todayis = new System.Windows.Forms.Label();
+            this.label_date = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txt_Welcome = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -144,11 +153,82 @@ namespace Journaling
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.panelDesktop.Controls.Add(this.label_time);
+            this.panelDesktop.Controls.Add(this.label_Todayis);
+            this.panelDesktop.Controls.Add(this.label_date);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
+            this.panelDesktop.Controls.Add(this.txt_Welcome);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(50, 0);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(958, 672);
             this.panelDesktop.TabIndex = 1;
+            // 
+            // label_time
+            // 
+            this.label_time.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_time.Font = new System.Drawing.Font("nintendoP_Humming-E_002pr", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_time.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.label_time.Location = new System.Drawing.Point(332, 267);
+            this.label_time.Name = "label_time";
+            this.label_time.Size = new System.Drawing.Size(284, 44);
+            this.label_time.TabIndex = 4;
+            this.label_time.Text = "00:00:00";
+            this.label_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_Todayis
+            // 
+            this.label_Todayis.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_Todayis.AutoSize = true;
+            this.label_Todayis.Font = new System.Drawing.Font("nintendoP_Humming-E_002pr", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Todayis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.label_Todayis.Location = new System.Drawing.Point(395, 179);
+            this.label_Todayis.Name = "label_Todayis";
+            this.label_Todayis.Size = new System.Drawing.Size(151, 44);
+            this.label_Todayis.TabIndex = 3;
+            this.label_Todayis.Text = "Today is";
+            this.label_Todayis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_date
+            // 
+            this.label_date.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_date.Font = new System.Drawing.Font("nintendoP_Humming-E_002pr", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.label_date.Location = new System.Drawing.Point(6, 223);
+            this.label_date.Name = "label_date";
+            this.label_date.Size = new System.Drawing.Size(940, 44);
+            this.label_date.TabIndex = 2;
+            this.label_date.Text = "DATE";
+            this.label_date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(426, 110);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txt_Welcome
+            // 
+            this.txt_Welcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_Welcome.Font = new System.Drawing.Font("nintendoP_Humming-E_002pr", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Welcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.txt_Welcome.Location = new System.Drawing.Point(14, 46);
+            this.txt_Welcome.Name = "txt_Welcome";
+            this.txt_Welcome.Size = new System.Drawing.Size(932, 44);
+            this.txt_Welcome.TabIndex = 0;
+            this.txt_Welcome.Text = "WELCOME, User";
+            this.txt_Welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -165,6 +245,9 @@ namespace Journaling
             this.Text = "WaldGeist - My Journaling Application";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
+            this.panelDesktop.ResumeLayout(false);
+            this.panelDesktop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -178,6 +261,12 @@ namespace Journaling
         private FontAwesome.Sharp.IconButton btnBook;
         private FontAwesome.Sharp.IconButton btnSetting;
         private System.Windows.Forms.Panel panelDesktop;
+        private System.Windows.Forms.Label txt_Welcome;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_date;
+        private System.Windows.Forms.Label label_Todayis;
+        private System.Windows.Forms.Label label_time;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

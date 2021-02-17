@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 using static Journaling.ColorThemePicker;
@@ -17,6 +17,9 @@ namespace Journaling
         public Form1()
         {
             InitializeComponent();
+            label_date.Text = DateTime.Now.ToString("D");
+            txt_Welcome.Text = "WELCOME, " + FirstCharToUpper(Environment.UserName);
+
         }
 
         public void UpdateColor()
@@ -28,8 +31,21 @@ namespace Journaling
             btnSetting.IconColor = RGBColors.color1;
             panelMenu.BackColor = RGBColors.color4;
             panelDesktop.BackColor = RGBColors.color3;
+            txt_Welcome.ForeColor = RGBColors.color1;
+            label_date.ForeColor = RGBColors.color1;
+            label_time.ForeColor = RGBColors.color1;
+            label_Todayis.ForeColor = RGBColors.color1;
         }
         //Methods
+        private string FirstCharToUpper(string userName)
+        {
+            switch (userName)
+            {
+                case null: throw new ArgumentNullException(nameof(userName));
+                case "": throw new ArgumentException($"{nameof(userName)} cannot be empty", nameof(userName));
+                default: return userName.First().ToString().ToUpper() + userName.Substring(1);
+            }
+        }
         private void ActivateButton(object senderBtn, Color color)
         {
             if (senderBtn != null)
@@ -103,6 +119,11 @@ namespace Journaling
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label_time.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 
