@@ -53,6 +53,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorThemePicker.cs" />
+    <Compile Include="FormMoodChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMoodChart.Designer.cs">
+      <DependentUpon>FormMoodChart.cs</DependentUpon>
+    </Compile>
     <Compile Include="RichTextBoxExtensions.cs" />
     <Compile Include="Entry.cs" />
     <Compile Include="Form1.cs">
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormJournal.resx">
       <DependentUpon>FormJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMoodChart.resx">
+      <DependentUpon>FormMoodChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>

@@ -11,11 +11,11 @@ namespace Journaling
         // Fields
         private bool toggle = false;
         private IconButton currentBtn;
+        const int dist = 15;
 
         public FormJournal()
         {
-            // Uses RichTextBoxExtensions.cs see http://stackoverflow.com/q/2914004/107625 WHY IS IT NOT WORKING ANYMOOOORE
-            const int dist = 15;
+            // Uses RichTextBoxExtensions.cs see http://stackoverflow.com/q/2914004/107625 why is it not working anymore!!!
             richTextBox1.SetInnerMargins(dist, 5, dist, 5);
             InitializeComponent();
         }
@@ -23,12 +23,16 @@ namespace Journaling
         {
             panelEditor.BackColor = RGBColors.color3;
             panelEntries.BackColor = RGBColors.color3;
+            splitterLeft.BackColor = RGBColors.color1;
+            splitterRight.BackColor = RGBColors.color1;
+            textDayTitle.ForeColor = RGBColors.color1;
+            iconBookmark.IconColor = RGBColors.color1;
+
         }
         public FormJournal(Action onSettingsChanged)
         {
             this.InitializeComponent();
         }
-        
         //Methods
         private void ActivateButton(object senderBtn, Color color)
         {

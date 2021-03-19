@@ -98,13 +98,16 @@ namespace Journaling
             ActivateButton(sender, Color.White);
             OpenChildForm(new FormJournal(this.UpdateColor));
         }
-
         private void btnBookmark_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.White);
             OpenChildForm(new FormFavorites(this.UpdateColor));
         }
-
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, Color.White);
+            OpenChildForm(new FormMoodChart(this.UpdateColor));
+        }
         private void btnCalendar_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.White);
@@ -125,6 +128,8 @@ namespace Journaling
         {
             label_time.Text = DateTime.Now.ToString("HH:mm:ss");
         }
+
+
     }
 
 }

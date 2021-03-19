@@ -5,11 +5,6 @@ using System.Windows.Forms;
 
 namespace Journaling
 {
-    using System;
-    using System.Drawing;
-    using System.Runtime.InteropServices;
-    using System.Windows.Forms;
-
     public static class RichTextBoxExtensions
     {
         public static void SetInnerMargins(this TextBoxBase textBox, int left, int top, int right, int bottom)

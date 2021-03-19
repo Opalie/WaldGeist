@@ -46,6 +46,7 @@ namespace Journaling
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_Welcome = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnChart = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +57,7 @@ namespace Journaling
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(187)))), ((int)(((byte)(208)))));
             this.panelMenu.Controls.Add(this.btnSetting);
             this.panelMenu.Controls.Add(this.btnCalendar);
+            this.panelMenu.Controls.Add(this.btnChart);
             this.panelMenu.Controls.Add(this.btnBookmark);
             this.panelMenu.Controls.Add(this.btnBook);
             this.panelMenu.Controls.Add(this.btnHome);
@@ -74,7 +76,7 @@ namespace Journaling
             this.btnSetting.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnSetting.IconSize = 40;
-            this.btnSetting.Location = new System.Drawing.Point(0, 180);
+            this.btnSetting.Location = new System.Drawing.Point(0, 225);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnSetting.Size = new System.Drawing.Size(50, 45);
@@ -91,7 +93,7 @@ namespace Journaling
             this.btnCalendar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnCalendar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCalendar.IconSize = 40;
-            this.btnCalendar.Location = new System.Drawing.Point(0, 135);
+            this.btnCalendar.Location = new System.Drawing.Point(0, 180);
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.btnCalendar.Size = new System.Drawing.Size(50, 45);
@@ -230,6 +232,23 @@ namespace Journaling
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnChart
+            // 
+            this.btnChart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChart.FlatAppearance.BorderSize = 0;
+            this.btnChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChart.IconChar = FontAwesome.Sharp.IconChar.ChartPie;
+            this.btnChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
+            this.btnChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnChart.IconSize = 40;
+            this.btnChart.Location = new System.Drawing.Point(0, 135);
+            this.btnChart.Name = "btnChart";
+            this.btnChart.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.btnChart.Size = new System.Drawing.Size(50, 45);
+            this.btnChart.TabIndex = 11;
+            this.btnChart.UseVisualStyleBackColor = true;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -267,6 +286,7 @@ namespace Journaling
         private System.Windows.Forms.Label label_Todayis;
         private System.Windows.Forms.Label label_time;
         private System.Windows.Forms.Timer timer1;
+        private FontAwesome.Sharp.IconButton btnChart;
     }
 }
 

@@ -41,11 +41,11 @@ namespace Journaling
             this.splitterLeft = new System.Windows.Forms.Splitter();
             this.splitterRight = new System.Windows.Forms.Splitter();
             this.panelCenter = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panelPages = new System.Windows.Forms.Panel();
             this.label_pages = new System.Windows.Forms.Label();
             this.icn_next = new FontAwesome.Sharp.IconButton();
             this.icn_previous = new FontAwesome.Sharp.IconButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panelTag.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelCenter.SuspendLayout();
@@ -168,6 +168,20 @@ namespace Journaling
             this.panelCenter.Size = new System.Drawing.Size(536, 625);
             this.panelCenter.TabIndex = 7;
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.AcceptsTab = true;
+            this.richTextBox1.BackColor = System.Drawing.Color.White;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.EnableAutoDragDrop = true;
+            this.richTextBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(0, 35);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(536, 520);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = "";
+            // 
             // panelPages
             // 
             this.panelPages.BackColor = System.Drawing.Color.White;
@@ -236,19 +250,6 @@ namespace Journaling
             this.icn_previous.MouseEnter += new System.EventHandler(this.icn_previous_MouseEnter);
             this.icn_previous.MouseLeave += new System.EventHandler(this.icn_previous_MouseLeave);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 35);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(536, 520);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
             // FormJournal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,7 +277,6 @@ namespace Journaling
         private System.Windows.Forms.Panel panelEditor;
         private System.Windows.Forms.Panel panelTag;
         private FontAwesome.Sharp.IconButton iconTag;
-        private FontAwesome.Sharp.IconButton iconBookmark;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelEntries;
         private System.Windows.Forms.Splitter splitterLeft;
@@ -288,5 +288,6 @@ namespace Journaling
         private System.Windows.Forms.Label label_pages;
         private System.Windows.Forms.TextBox textDayTitle;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private FontAwesome.Sharp.IconButton iconBookmark;
     }
 }
